@@ -7,7 +7,12 @@
     "lint": "eslint \"src\"",
     "dev": "dotenv -c '.env' -- node dist/app",
     "start": "node dist/app.js"
-  },
+  },  
+  "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+  ]
   "dependencies": {
     "adminjs": "^7.7.2",
     "@adminjs/express": "^6.1.0",
